@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author hammadashraf2083
  */
 public class SGPACAL extends javax.swing.JFrame {
-
+            
     /**
      * Creates new form SGPACAL
      */
@@ -37,9 +37,61 @@ public class SGPACAL extends javax.swing.JFrame {
      int k4 ;
      int k5 ;
      int k6 ;
-     
    
- 
+     int x1;
+     int x2;
+     int x3;
+     int x4;
+     int x5;
+     int x6;
+     
+    String a1;
+    String a2;
+    String a3;
+    String a4;
+    String a5;
+    String a6;
+   double var;
+   
+    public double convert(String marks) {
+        if (marks == "A1") {
+         var = 4;
+
+        } else if (marks == "A2") {
+            var = 4;
+        }
+        else if (marks == "A3") {
+            var = 3.66;
+        }
+         else if (marks == "B1") {
+            var = 3.33;
+        }
+        else if (marks == "B2") {
+            var = 3.0;
+        }
+        else if (marks == "B3") {
+            var = 2.66;
+        }
+        else if (marks == "C1") {
+            var = 2.33;
+        }
+        else if (marks == "C2") {
+            var = 2.0;
+        }
+        else if (marks == "C3") {
+            var = 1.5;
+        }
+        else if (marks == "F") {
+            var = 0;
+        }
+        
+
+        
+        return var;
+    
+        } 
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -102,8 +154,11 @@ public class SGPACAL extends javax.swing.JFrame {
         hide2 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 102, 51));
 
         sc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", " " }));
 
@@ -134,7 +189,7 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
-        g1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "3.66", "3.33", "3.0", "2.66", "2.33", "2.0", "1.5", "0.0" }));
+        g1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
         g1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 g1ActionPerformed(evt);
@@ -205,6 +260,9 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
+        b7.setBackground(new java.awt.Color(255, 255, 255));
+        b7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        b7.setForeground(new java.awt.Color(204, 0, 51));
         b7.setText("CALCULATE SPGA");
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,15 +272,15 @@ public class SGPACAL extends javax.swing.JFrame {
 
         jLabel11.setText("SEMESTER");
 
-        g2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4\t", "3.66", "3.33", "3.0", "2.66", "2.33", "2", "1.5", "0" }));
+        g2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
 
-        g3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4\t", "3.66", "3.33", "3.0", "2.66", "2.33", "2", "1.5", "0" }));
+        g3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
 
-        g4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4\t", "3.66", "3.33", "3", "2.66", "2.33", "2", "1.5", "0" }));
+        g4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
 
-        g5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4\t", "3.66", "3.33", "3", "2.66", "2.33", "2", "1.5", "0" }));
+        g5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
 
-        g6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4\t", "3.66", "3.33", "3", "2.66", "2.33", "2", "1.5", "0" }));
+        g6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "F" }));
 
         rollno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,6 +295,10 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(204, 0, 51));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton1.setText("CALCULATE_CGPA");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,6 +306,9 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 0, 51));
         jButton2.setText("NEXT-SEMESTER");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +321,16 @@ public class SGPACAL extends javax.swing.JFrame {
         hide1.setText("jTextField1");
 
         hide2.setText("jTextField2");
+        hide2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hide2ActionPerformed(evt);
+            }
+        });
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(204, 0, 51));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton3.setText("GPA_BY_MARKS");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,10 +338,30 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(204, 0, 51));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton4.setText("GPAFORMULA");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setBackground(new java.awt.Color(153, 51, 255));
+        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel6.setText("GPABYGRADES");
+
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(204, 0, 51));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear_symbol_32px.png"))); // NOI18N
+        jButton5.setText("LOGOUT");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -287,11 +381,16 @@ public class SGPACAL extends javax.swing.JFrame {
                             .addComponent(l5)
                             .addComponent(l6))
                         .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rollno)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rollno, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -366,7 +465,15 @@ public class SGPACAL extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(g4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
-                                .addComponent(b4))))
+                                .addComponent(b4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(91, 91, 91)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(hide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton5))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -379,30 +486,29 @@ public class SGPACAL extends javax.swing.JFrame {
                                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(67, 67, 67)))
                         .addComponent(b6)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addGap(214, 214, 214)
-                        .addComponent(jButton1)
-                        .addGap(87, 87, 87)
-                        .addComponent(jButton4)
-                        .addContainerGap(55, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(hide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(113, 113, 113))))
+                .addComponent(jButton3)
+                .addGap(214, 214, 214)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
@@ -470,7 +576,7 @@ public class SGPACAL extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(45, 45, 45)
                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
@@ -485,126 +591,125 @@ public class SGPACAL extends javax.swing.JFrame {
         DAO dao = new DAO();
         sgpa s = new sgpa();
 
-        for (int i = 0; i < 6; i++) {
+         for (int i = 0; i < 6; i++) {
 
             if (i == 0 ) {
                 s.cr = Integer.parseInt((String) c1.getSelectedItem());
-
-                s.gradepoints = Double.parseDouble((String) g1.getSelectedItem());
-                 
+            x1 = Integer.parseInt((String) c1.getSelectedItem());
+                s.gradepoints = (String) g1.getSelectedItem();
+                a1 = (String) g1.getSelectedItem();
                 s.marks = Integer.parseInt(m1.getText());
                 k1= Integer.parseInt(m1.getText());
                 s.subject = s1.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
                 s.semester = Integer.parseInt((String) sc.getSelectedItem());
 
-                int a = dao.insertgpa(s);
+             
 
             } else if (i == 1 && q == true) {
                 s.cr = Integer.parseInt((String) c2.getSelectedItem());
-                s.gradepoints = Double.parseDouble((String) g2.getSelectedItem());
+                x2 = Integer.parseInt((String) c2.getSelectedItem());
+                
+                s.gradepoints = (String) g2.getSelectedItem();
+                a2 = (String) g2.getSelectedItem();
                 s.marks = Integer.parseInt(m2.getText());
                 k2=Integer.parseInt(m2.getText());
                 s.subject = s2.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
-                int a = dao.insertgpa(s);
+           
             } else if (i == 2 && w == true) {
                 s.cr = Integer.parseInt((String) c3.getSelectedItem());
-                s.gradepoints = Double.parseDouble((String) g3.getSelectedItem());
+                x3 = Integer.parseInt((String) c3.getSelectedItem());
+                s.gradepoints = (String) g3.getSelectedItem();
+                a3 = (String) g3.getSelectedItem();
                 s.marks = Integer.parseInt(m3.getText());
                 k3= Integer.parseInt(m3.getText());
 
                 s.subject = s3.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
-                int a = dao.insertgpa(s);
+           
             } else if (i == 3 && r == true) {
                 s.cr = Integer.parseInt((String) c4.getSelectedItem());
-                s.gradepoints = Double.parseDouble((String) g4.getSelectedItem());
-                s.marks = Integer.parseInt(m4.getText());
+                x4 = Integer.parseInt((String) c4.getSelectedItem());
+                s.gradepoints = (String) g4.getSelectedItem();
+                a4 = (String) g4.getSelectedItem();
+                 s.marks = Integer.parseInt(m4.getText());
                 k4=Integer.parseInt(m4.getText());
                 s.subject = s4.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
-                int a = dao.insertgpa(s);
+        
             } else if (i == 4 && t == true) {
                 s.cr = Integer.parseInt((String) c5.getSelectedItem());
-                s.gradepoints = Double.parseDouble((String) g5.getSelectedItem());
+                x5 = Integer.parseInt((String) c5.getSelectedItem());
+                 s.gradepoints = (String) g5.getSelectedItem();
+                a5 = (String) g5.getSelectedItem();
                 s.marks = Integer.parseInt(m5.getText());
                 k5=Integer.parseInt(m5.getText());
                 s.subject = s5.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
-                int a = dao.insertgpa(s);
+            
             } else if (i == 5 && o == true) {
 
                 s.cr = Integer.parseInt((String) c6.getSelectedItem());
-                s.gradepoints = Double.parseDouble((String) g6.getSelectedItem());
-                s.marks = Integer.parseInt(m6.getText());
+                x6 = Integer.parseInt((String) c6.getSelectedItem());
+               s.gradepoints = (String) g6.getSelectedItem();
+                a6 = (String) g6.getSelectedItem();
+                  s.marks = Integer.parseInt(m6.getText());
                 k6=Integer.parseInt(m6.getText());
                 
                 s.subject = s6.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
-                int a = dao.insertgpa(s);
+       
                 System.out.println("INSERTED");
 
             } else {
                 System.out.println("INSERTED");
                    }
-            
-            
         }
-
+            
+        // double x2 = convert(k2);
+        double q1 =convert(a1);
+        double q2 =convert(a2);
+        double q3 =convert(a3);
+        double q4 =convert(a4);
+        double q5 =convert(a5);
+        double q6 =convert(a6);
         
         
         
-        for (int j = 0; j < 2; j++) {
-            if (j == 0) {
-                s.rollno = Integer.parseInt(rollno.getText());
-               s.semester = Integer.parseInt((String) sc.getSelectedItem());
-                ResultSet rs = dao.sgpaa(s);
-
-                System.out.println(rs);
-                try {
-                    while (rs.next()) {
-
-                        hide1.setText(rs.getString(1) + "");
-
-                    }
-                } catch (Exception ex) {
-                    System.out.println(ex.toString());
-                }
-            } else if (j == 1) {
-                s.rollno = Integer.parseInt(rollno.getText());
-                s.semester = Integer.parseInt((String) sc.getSelectedItem());
-                ResultSet rs = dao.grade(s);
-
-                System.out.println(rs);
-                try {
-                    while (rs.next()) {
- 
-    int e;
-    double f;
-                        hide2.setText(rs.getDouble(1) + "");
-                        e = Integer.parseInt(hide1.getText());
-                        f = Double.parseDouble(hide2.getText());
-                        System.out.println(f);
-                        double l;
-                        l = f/e;
-// send data gpa ,sem,roll to cgpa table
-                        gpa.setText(""+l);
-                        s.cgpa=Double.parseDouble(gpa.getText());
+        double sum = q1 + q2 + q3 + q4 + q5 + q6;
+         int f9 = x1+x2+x3+x4+x5+x6;
+         double r2 = q2 * x2;
+        double r1 = q1 *  x1;
+        double r3 = q3 * x3;
+        double r4 = q4 * x4;
+        double r5 = q5 * x5;
+        double r6 = q6 * x6;
+        double gp = r1 + r2 + r3 + r4 + r5 + r6;
+        double result = gp / f9;
+        System.out.println("sgpa =" + result);
+        gpa.setText(""+result);
+        
+                      s.cgpa=Double.parseDouble(gpa.getText());
                         s.rollno = Integer.parseInt(rollno.getText());
                         s.semester = Integer.parseInt((String) sc.getSelectedItem());
-                        int k = dao.insertcgpa(s);
+                      int k = dao.insertcgpa(s);
+      
+                        //hide2.setText(rs.getDouble(1) + "");
+                        //e = Integer.parseInt(hide1.getText());
+                        //f = Double.parseDouble(hide2.getText());
+                        //System.out.println(f);
+                        //double l;
+                      //  l = f/e;
+// send data gpa ,sem,ro/ll to cgpa table
+                     //   gpa.setText(""+l);
+                       
 
-                    }
-                } catch (Exception ex) {
-                    System.out.println(ex.toString());
-                }
+            
 
-            }
-
-        }
+   
 b7.setEnabled(false);
-
+sc.setEnabled(false);
     }//GEN-LAST:event_b7ActionPerformed
 
     private void c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1ActionPerformed
@@ -699,7 +804,21 @@ b7.setEnabled(false);
     }//GEN-LAST:event_g1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-b7.setEnabled(true);        // TODO add your handling code here:
+   s1.setText("");
+        m1.setText("");
+        m2.setText("");
+        m3.setText("");
+        m4.setText("");
+        m5.setText("");
+        m6.setText("");
+        s2.setText("");
+        s3.setText("");
+        s4.setText("");
+        s5.setText("");
+        s6.setText("");
+gpa.setText("");
+        sc.setEnabled(true);
+        b7.setEnabled(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void m1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m1ActionPerformed
@@ -717,6 +836,18 @@ FORMULA obj=new FORMULA();
 obj.setVisible(true);
 dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+log obj=new log();
+obj.setVisible(true);
+dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void hide2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hide2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hide2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -781,12 +912,14 @@ dispose();        // TODO add your handling code here:
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel l1;
     private javax.swing.JLabel l2;
     private javax.swing.JLabel l3;

@@ -89,7 +89,6 @@ public class GPABYMARKS extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         m1 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         b1 = new javax.swing.JButton();
         l2 = new javax.swing.JLabel();
         s2 = new javax.swing.JTextField();
@@ -127,6 +126,8 @@ public class GPABYMARKS extends javax.swing.JFrame {
         hide1 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,8 +159,6 @@ public class GPABYMARKS extends javax.swing.JFrame {
                 m1ActionPerformed(evt);
             }
         });
-
-        jLabel5.setText("GRADE");
 
         b1.setText("HIDE");
         b1.addActionListener(new java.awt.event.ActionListener() {
@@ -223,6 +222,9 @@ public class GPABYMARKS extends javax.swing.JFrame {
             }
         });
 
+        b7.setBackground(new java.awt.Color(255, 255, 255));
+        b7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        b7.setForeground(new java.awt.Color(204, 0, 51));
         b7.setText("CALCULATE SPGA");
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +247,10 @@ public class GPABYMARKS extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(204, 0, 51));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton1.setText("CALCULATE_CGPA");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,6 +258,9 @@ public class GPABYMARKS extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 0, 51));
         jButton2.setText("NEXT-SEMESTER");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,6 +274,10 @@ public class GPABYMARKS extends javax.swing.JFrame {
 
         hide1.setText("jTextField2");
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(204, 0, 51));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton3.setText("GPA_BY_GRADES");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,10 +285,30 @@ public class GPABYMARKS extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(204, 0, 51));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/visible_32px.png"))); // NOI18N
         jButton4.setText("GPA_FORMULA");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setBackground(new java.awt.Color(153, 51, 255));
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 0, 51));
+        jLabel6.setText("GPABYMARKS");
+
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(204, 0, 51));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear_symbol_32px.png"))); // NOI18N
+        jButton5.setText("LOGOUT");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -314,8 +347,8 @@ public class GPABYMARKS extends javax.swing.JFrame {
                                     .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(s5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(s6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,20 +358,19 @@ public class GPABYMARKS extends javax.swing.JFrame {
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                     .addComponent(jLabel11)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(c1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(sc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(c3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(c2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(c4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(c5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(c6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addGap(15, 15, 15)
-                                            .addComponent(jLabel2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(15, 15, 15)
+                                                .addComponent(jLabel2)
+                                                .addGap(66, 66, 66)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel3)
-                                            .addGap(35, 35, 35))))
+                                            .addComponent(c1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(sc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(c3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(c2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(c4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(c5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(c6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(71, 71, 71)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -348,10 +380,7 @@ public class GPABYMARKS extends javax.swing.JFrame {
                                             .addComponent(b5))
                                         .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jLabel4)
-                                                    .addGap(49, 49, 49)
-                                                    .addComponent(jLabel5))
+                                                .addComponent(jLabel4)
                                                 .addComponent(m1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(b1))
@@ -367,7 +396,7 @@ public class GPABYMARKS extends javax.swing.JFrame {
                                         .addComponent(m2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(81, 81, 81)
                                         .addComponent(b2)))))
-                        .addContainerGap(170, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -382,36 +411,43 @@ public class GPABYMARKS extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(b6)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton4)
                                 .addGap(76, 76, 76))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56))
+                .addComponent(hide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(239, 239, 239))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jButton3)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jButton5)
+                .addGap(59, 59, 59))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(hide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(hide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel11))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5)
                     .addComponent(rollno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(41, 41, 41)
@@ -463,7 +499,7 @@ public class GPABYMARKS extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(45, 45, 45)
                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
@@ -550,90 +586,53 @@ public class GPABYMARKS extends javax.swing.JFrame {
         }
 
         double x1 = convert(k1);
+        System.out.println("MARKS  " + x1);
+
         double x2 = convert(k2);
+        System.out.println("MARKS  " + x2);
         double x3 = convert(k3);
+        System.out.println("MARKS  " + x3);
         double x4 = convert(k4);
+        System.out.println("MARKS  " + x4);
         double x5 = convert(k5);
+        System.out.println("MARKS  " + x5);
         double x6 = convert(k6);
+        System.out.println("MARKS  " + x6);
 
         double sum = x1 + x2 + x3 + x4 + x5 + x6;
-        System.out.println(x1);
-        System.out.println(x2);
+
         System.out.println(sum);
         int f9 = a1 + a2 + a3 + a4 + a5 + a6;
 
-        double r2 = a1 * x2;
+        double r2 = a2 * x2;
         double r1 = a1 * x1;
-        double r3 = a1 * x3;
-        double r4 = a1 * x4;
-        double r5 = a1 * x5;
-        double r6 = a1 * x6;
+        double r3 = a3 * x3;
+        double r4 = a4 * x4;
+        double r5 = a5 * x5;
+        double r6 = a6 * x6;
         double gp = r1 + r2 + r3 + r4 + r5 + r6;
         double result = gp / f9;
         System.out.println("sgpa =" + result);
-        gpa.setText(""+result);
-     
-        
-        
-        
+        gpa.setText("" + result);
+
+        System.out.println("cr   " + a1);
+        System.out.println("cr   " + a2);
+        System.out.println("cr   " + a3);
+        System.out.println("cr   " + a4);
+        System.out.println("cr   " + a5);
+        System.out.println("cr   " + a6);
         if (result > 4) {
             result = 4;
         }
 
-        for (int j = 0; j < 2; j++) {
-            if (j == 0) {
-                s.rollno = Integer.parseInt(rollno.getText());
-                ResultSet rs = dao.sgpaa(s);
-//select SUm CR where rollno=? and semester=?
-                System.out.println(rs);
-                try {
-                    while (rs.next()) {
-//set sum  of cr in textfield name hide1 
-                        hide1.setText(rs.getString(1) + "");
+        s.cgpa = Double.parseDouble(gpa.getText());
+        s.rollno = Integer.parseInt(rollno.getText());
+        s.semester = Integer.parseInt((String) sc.getSelectedItem());
+        int k = dao.insertcgpa(s);
 
-                    }
-                } catch (Exception ex) {
-                    System.out.println(ex.toString());
-                }
-            } else if (j == 1) {
-                // select sum(cr*gradepoints) from sgpa where rollno=? AND semester=?
-                s.rollno = Integer.parseInt(rollno.getText());
-                s.semester = Integer.parseInt((String) sc.getSelectedItem());
-                ResultSet rs = dao.grade(s);
-
-                System.out.println(rs);
-                try {
-                    while (rs.next()) {
-
-                        int e;
-                        double f;
-                        //  set value of l in hide 2
-                      hide2.setText(rs.getDouble(1) + "");
-                      
-                        e = Integer.parseInt(hide1.getText());
-                        f = Double.parseDouble(hide2.getText());
-                        System.out.println(f);
-                        double l;
-                        l = f / e;
-
-                        gpa.setText("" + result);
-
-                         
-                      
-
-                    }
-                } catch (Exception ex) {
-                    System.out.println(ex.toString());
- // send data gpa ,sem,roll to cgpa                }
-  s.cgpa=Double.parseDouble(gpa.getText());
-                        s.rollno = Integer.parseInt(rollno.getText());
-                        s.semester = Integer.parseInt((String) sc.getSelectedItem());
-                        int k = dao.insertcgpa(s);
-            }
-
-        }
         b7.setEnabled(false);
-        }
+        sc.setEnabled(false);
+
     }//GEN-LAST:event_b7ActionPerformed
 
     private void c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1ActionPerformed
@@ -724,6 +723,21 @@ public class GPABYMARKS extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //s1 m1 c1 b1
+        s1.setText("");
+        m1.setText("");
+        m2.setText("");
+        m3.setText("");
+        m4.setText("");
+        m5.setText("");
+        m6.setText("");
+        s2.setText("");
+        s3.setText("");
+        s4.setText("");
+        s5.setText("");
+        s6.setText("");
+gpa.setText("");
+        sc.setEnabled(true);
         b7.setEnabled(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -744,6 +758,14 @@ public class GPABYMARKS extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        log obj = new log();
+        obj.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -803,12 +825,13 @@ public class GPABYMARKS extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel l1;
     private javax.swing.JLabel l2;
     private javax.swing.JLabel l3;

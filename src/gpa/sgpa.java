@@ -13,7 +13,7 @@ public class sgpa {
        int marks;
     int cr;
   String subject;
-    Double gradepoints;
+    String gradepoints;
     int semester;
     int rollno;
     double sgpa;

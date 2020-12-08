@@ -74,7 +74,7 @@ public class DAO {
             pst.setString(5, s.subject);
             pst.setInt(1, s.rollno);
             pst.setInt(7, s.semester);
-            pst.setDouble(6, s.gradepoints);
+            pst.setString(6, s.gradepoints);
             pst.setDouble(2, s.sgpa);
 
             res = pst.executeUpdate();
@@ -87,41 +87,9 @@ public class DAO {
 
     }
 
-    ResultSet sgpaa(sgpa s) {
-        ResultSet rs = null;
-        try {
-            Connection();
 
-            String query = "SELECT SUM(cr) FROM sgpa where rollno=? AND semester=?";
-            PreparedStatement pst = con.prepareStatement(query);
-            pst.setInt(1, s.rollno);
-            pst.setInt(2,s.semester);
-            rs = pst.executeQuery();
 
-        } catch (Exception ex) {
-            System.out.println(ex.toString());
-        }
-        ;
-        return rs;
-    }
 
-    ResultSet grade(sgpa s) {
-        ResultSet rs = null;
-        try {
-            Connection();
-
-            String query = "select sum(cr*gradepoints) from sgpa where rollno=? AND semester=?";
-            PreparedStatement pst = con.prepareStatement(query);
-            pst.setInt(1, s.rollno);
-            pst.setInt(2,s.semester);
-            rs = pst.executeQuery();
-
-        } catch (Exception ex) {
-            System.out.println(ex.toString());
-        }
-        ;
-        return rs;
-    }
 
     int insertcgpa(sgpa s) {
         int res = 0;
